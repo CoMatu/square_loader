@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:square_loader/page_navigator.dart';
+import '../navigation/page_navigator.dart';
 
 class SidebarWidget extends StatelessWidget {
   /// Виджет боковой панели с кнопками, при нажатии на которые происходит навигация

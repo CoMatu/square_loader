@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:square_loader/settings_widget.dart';
-import 'package:square_loader/square_loader.dart';
+
+import '../widgets/settings_widget.dart';
+import '../widgets/square_loader.dart';
 
 // Глобальный навигационный ключ для поиска навигатора в контексте приложения
 GlobalKey<NavigatorState> pageNavigator = GlobalKey<NavigatorState>();

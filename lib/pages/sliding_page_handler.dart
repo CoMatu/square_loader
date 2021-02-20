@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:square_loader/page_navigator.dart';
+import 'package:square_loader/navigation/page_navigator.dart';
 
 class SlidingPageHandler extends StatelessWidget {
   /// Виджет, который позиционирует положение страницы относительно боковой

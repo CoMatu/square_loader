@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:square_loader/main_page.dart';
+import 'package:square_loader/pages/main_page.dart';
 
 void main() {
   runApp(MyApp());
