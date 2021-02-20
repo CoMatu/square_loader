@@ -5,9 +5,12 @@ class AccountWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final name = 'assets/woman.jpg';
+
     return Container(
-      child: Placeholder(
-        color: Colors.green,
+      child: Image.asset(
+        name,
+        fit: BoxFit.cover,
       ),
     );
   }
