@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 class SquareLoader extends StatefulWidget {
+  /// Квадратный лоадер, созданный с помощью анимированных контейнеров
   SquareLoader({Key key}) : super(key: key);
 
   @override
@@ -138,19 +139,19 @@ class _SquareLoaderState extends State<SquareLoader> {
 
     final button = OutlinedButton(
       style: OutlinedButton.styleFrom(
-        backgroundColor: Colors.green,
+        minimumSize: Size(150, 50),
       ),
       onPressed: () {
         setState(() {
           start = !start;
         });
       },
-      child: Text('start'),
+      child: Text('START'),
     );
 
     final resetButton = OutlinedButton(
       style: OutlinedButton.styleFrom(
-        backgroundColor: Colors.blue,
+        minimumSize: Size(150, 50),
       ),
       onPressed: () {
         setState(() {
@@ -163,7 +164,7 @@ class _SquareLoaderState extends State<SquareLoader> {
           visible4 = false;
         });
       },
-      child: Text('reset'),
+      child: Text('RESET'),
     );
 
     return Scaffold(

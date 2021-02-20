@@ -2,6 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:square_loader/page_navigator.dart';
 
 class SlidingPageHandler extends StatelessWidget {
+  /// Виджет, который позиционирует положение страницы относительно боковой
+  /// панели. Можно заменить Positioned на AnimatedPositioned и тогда можно будет
+  /// добиться эффекта сдвига страницы, чтобы она закрывала и открывала панель
+  /// навигации.
+
   const SlidingPageHandler({Key key}) : super(key: key);
 
   @override
