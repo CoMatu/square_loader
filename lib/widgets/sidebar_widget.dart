@@ -34,7 +34,7 @@ class SidebarWidget extends StatelessWidget {
     final accountItem = Align(
       alignment: Alignment.centerLeft,
       child: TextButton.icon(
-          onPressed: () {},
+          onPressed: () => pageNavigator.currentState.pushNamed('account'),
           icon: Icon(Icons.account_box_outlined),
           label: Text('Account')),
     );

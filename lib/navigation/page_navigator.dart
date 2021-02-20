@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../widgets/account_widget.dart';
 import '../widgets/settings_widget.dart';
 import '../widgets/square_loader.dart';
 
@@ -26,11 +26,26 @@ class PageNavigator extends StatelessWidget {
               case 'settings':
                 return SettingsWidget();
                 break;
+              case 'account':
+                return AccountWidget();
+                break;
               default:
                 return SquareLoader();
             }
           },
-          transitionDuration: const Duration(seconds: 0),
+          // настройка типа анимации при смене страниц
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            var begin = Offset(0.0, 1.0);
+            var end = Offset.zero;
+            var tween = Tween(begin: begin, end: end);
+            var offsetAnimation = animation.drive(tween);
+            return SlideTransition(
+              position: offsetAnimation,
+              child: child,
+            );
+          },
+          //настройка времени перехода
+          transitionDuration: const Duration(milliseconds: 300),
         );
       },
     );
