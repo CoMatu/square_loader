@@ -9,7 +9,7 @@ class SquareLoader extends StatefulWidget {
 
 class _SquareLoaderState extends State<SquareLoader> {
   bool start, verticalStart, startHoriz, visible1, visible2, visible3, visible4;
-  int speed = 2500;
+  int speed = 1500;
 
   @override
   void initState() {
@@ -123,15 +123,17 @@ class _SquareLoaderState extends State<SquareLoader> {
           )
         : placeholder;
 
-    final mainStack = Stack(
-      children: [
-        background,
-        positioned,
-        animatedPositionedLeft,
-        animatedPositionedRight,
-        animatedPositionedTop,
-        animatedPositionedBottom,
-      ],
+    final mainStack = Container(
+      child: Stack(
+        children: [
+          background,
+          positioned,
+          animatedPositionedLeft,
+          animatedPositionedRight,
+          animatedPositionedTop,
+          animatedPositionedBottom,
+        ],
+      ),
     );
 
     final button = OutlinedButton(
@@ -168,7 +170,7 @@ class _SquareLoaderState extends State<SquareLoader> {
       backgroundColor: Colors.white,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             mainStack,
             button,
